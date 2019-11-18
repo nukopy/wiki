@@ -1,27 +1,21 @@
 import React from "react";
-import styled from "react-emotion";
 import Tree from "./tree";
 import { StaticQuery, graphql } from "gatsby";
+import { css } from "@emotion/core";
+import styled from "@emotion/styled";
 import { ExternalLink } from "react-feather";
 import "../styles.css";
 import config from "../../../config";
 
 const forcedNavOrder = config.sidebar.forcedNavOrder;
 
-const ListItem = styled(({ className, active, level, ...props }) => {
-    return (
-      <li className={className}>
-        <a href={props.to} {...props} />
-      </li>
-    );
-})`
+const ListItemStyle = (props, level) => css`
   list-style: none;
-
   a {
-    color: #5C6975;
+    color: #5c6975;
     text-decoration: none;
-    font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
-    padding: 0.45rem 0 0.45rem ${props => 2 + (props.level || 0) * 1}rem;
+    font-weight: ${level === 0 ? 700 : 400};
+    padding: 0.45rem 0 0.45rem ${2 + (props.level || 0) * 1}rem;
     display: block;
     position: relative;
 
@@ -29,20 +23,28 @@ const ListItem = styled(({ className, active, level, ...props }) => {
       color: rgb(116, 76, 188) !important;
     }
 
-    ${props =>
-      props.active &&
+    ${props.active &&
       `
-      color: #663399;
-      border-color: rgb(230,236,241) !important;
-      border-style: solid none solid solid;
-      border-width: 1px 0px 1px 1px;
-      background-color: #fff;
-    `} // external link icon
-    svg {
+    color: #663399;
+    border-color: rgb(230,236,241) !important;
+    border-style: solid none solid solid;
+    border-width: 1px 0px 1px 1px;
+    background-color: #fff;
+  `} // external link icon
+  svg {
       float: right;
       margin-right: 1rem;
     }
   }
+`;
+const ListItem = styled(({ className, active, level, ...props }) => {
+  return (
+    <li className={className}>
+      <a href={props.to} {...props} />
+    </li>
+  );
+})`
+  ${ListItemStyle}
 `;
 
 const Sidebar = styled("aside")`
@@ -92,7 +94,7 @@ const Sidebar = styled("aside")`
 `;
 
 const Divider = styled(props => (
-  <li {...props}>
+  <li {...props} key={"divider"}>
     <hr />
   </li>
 ))`
