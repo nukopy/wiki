@@ -8,4 +8,4 @@ export const PoweredBy = () => (
       <Algolia size="1em" /> Algolia
     </a>
   </span>
-)
+);
