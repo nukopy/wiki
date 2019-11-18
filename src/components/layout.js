@@ -20,12 +20,13 @@ const Content = styled("main")`
   display: flex;
   flex-grow: 1;
   margin: 0px 50px;
-  margin-top: 2rem;
+  padding-top: 2rem;
+  background-color: #e6e7ec;
 
   @media only screen and (max-width: 1023px) {
     padding-left: 10px;
     margin: 0 10px;
-    margin-top: 2rem;
+    padding-top: 2rem;
   }
 `;
 
@@ -38,11 +39,11 @@ const MaxWidth = styled("div")`
 
 const LeftSideBarWidth = styled("div")`
   width: 250px;
-  min-width: 250px;
+  min-width: 200px;
 `;
 const RightSideBarWidth = styled("div")`
   width: 224px;
-  min-width: 224px;
+  min-width: 175px;
 `;
 
 const Layout = ({ children, location }) => (
