@@ -66,7 +66,7 @@ body {
 
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
-  background-color: #542683;
+  background-color: rgb(55, 122, 115);
 }
 
 .headerWrapper {
@@ -176,17 +176,17 @@ body {
 
 /* Header section starts here */
 .navBarDefault {
-  background-color: #372476;
+  background-color: rgb(55, 122, 115);
   border-radius: 0;
   border-top: 0;
   margin-bottom: 0;
   border: 0;
   display: flex;
   align-items: center;
-  box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, .4);
-  -webkit-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, .4);
-  -moz-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, .8);
-  -o-box-shadow: -1px 0px 4px 1px rgba(175, 158, 232, .4);
+  box-shadow: -1px 0px 4px 1px rgba(23, 85, 78, 0.5);
+  -webkit-box-shadow: -1px 0px 4px 1px rgba(23, 85, 78, 0.5);
+  -moz-box-shadow: -1px 0px 4px 1px rgba(23, 85, 78, 0.5);
+  -o-box-shadow: -1px 0px 4px 1px rgba(23, 85, 78, 0.5);
   z-index: 1;
   padding: 15px;
 }
@@ -244,7 +244,7 @@ body {
 
 pre {
   border: 0 !important;
-  background-color: rgb(245, 247, 249);
+  background-color: #e6e7ec;
   /* !important; */
 }
 
@@ -268,14 +268,14 @@ pre {
 .headerNav {
   font-family: 'Roboto';
   padding: 0px 24px;
-  color: rgb(116, 76, 188);
+  color: rgb(55, 122, 115);
   font-size: 16px;
   font-weight: 500;
   line-height: 1em;
 }
 
 .headerNav a {
-  color: rgb(116, 76, 188);
+  color: rgb(55, 122, 115);
   text-decoration: none;
 }
 
@@ -349,7 +349,7 @@ pre {
 }
 
 .hideFrontLine .active>a {
-  background-color: #542683;
+  background-color: rgba(35, 99, 92, 0.5);
   color: #fff !important;
 }
 
@@ -358,7 +358,7 @@ pre {
 }
 
 .active .collapser>svg>path {
-  fill: #663399 !important;
+  fill: rgba(35, 99, 92, 0.5) !important;
 }
 
 .firstLevel ul .item ul .item {
@@ -381,17 +381,17 @@ pre {
 }
 
 .sideBarUL .item>a:hover {
-  background-color: #542683;
+  background-color: rgba(35, 99, 92, 0.5);
   color: #fff !important;
 }
 
 .showFrontLine .item>a:hover {
-  background-color: #542683;
+  background-color: rgba(35, 99, 92, 0.5);
 }
 
 .showFrontLine .active>a {
   color: #fff;
-  background-color: #473485;
+  background-color: rgba(35, 99, 92, 0.5);
 }
 
 .sideBarUL .item .item {
@@ -413,7 +413,7 @@ pre {
   border-color: rgb(230, 236, 241) !important;
   border-style: solid none solid solid;
   border-width: 1px 0px 1px 1px;
-  background-color: #542683;
+  background-color: rgba(35, 99, 92, 0.5);
   color: #fff;
 }
 
@@ -430,7 +430,7 @@ pre {
   font-size: 32px;
   line-height: 1.5;
   font-weight: 500;
-  border-left: 2px solid rgb(116, 76, 188);
+  border-left: 2px solid rgb(55, 122, 115);
   padding: 0 16px;
   flex: 1;
   margin-top: 0;
@@ -571,14 +571,14 @@ pre {
 
 .nextBtn:hover,
 .previousBtn:hover {
-  color: rgb(116, 76, 188);
+  color: rgb(55, 122, 115);
   text-decoration: none;
-  border: 1px solid rgb(116, 76, 188);
+  border: 1px solid rgb(55, 122, 115);
 }
 
 .nextBtn:hover .rightArrow,
 .previousBtn:hover .leftArrow {
-  color: rgb(116, 76, 188);
+  color: rgb(55, 122, 115);
 }
 
 /* tables.css */

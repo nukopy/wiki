@@ -10,7 +10,7 @@ const notificationTypes = {
     light: "rosybrown"
   },
   info: {
-    dark: "#663399",
+    dark: "#rgb(55, 122, 115)",
     light: "#FFFFFF"
   }
 };

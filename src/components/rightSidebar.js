@@ -30,7 +30,7 @@ const ListItemStyle = (props, level) => css`
   list-style: none;
 
   a {
-    color: #5c6975;
+    color: rgba(55, 122, 115, 0.8);
     text-decoration: none;
     font-weight: ${level === 0 ? 700 : 400};
     padding: 0.45rem 0 0.45rem ${2 + (props.level || 0) * 1}rem;
@@ -38,12 +38,12 @@ const ListItemStyle = (props, level) => css`
     position: relative;
 
     &:hover {
-      color: rgb(116, 76, 188) !important;
+      color: rgba(55, 122, 115, 1) !important;
     }
 
     ${props.active &&
       `
-      color: #663399;
+      color: rgba(55, 122, 115, 1);
       border-color: rgb(230,236,241) !important;
       border-style: solid none solid solid;
       border-width: 1px 0px 1px 1px;
