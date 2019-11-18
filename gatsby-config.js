@@ -10,7 +10,6 @@ const plugins = [
       component: require.resolve(`./src/templates/docs.js`)
     }
   },
-  'gatsby-plugin-styled-components',
   {
     resolve: "gatsby-plugin-mdx",
     options: {
@@ -50,6 +49,21 @@ const plugins = [
       anonymize: false
     }
   },
+  {
+    resolve: "gatsby-source-graphql",
+    options: {
+      typeName: "GitHub",
+      fieldName: "github",
+      url: "https://api.github.com/graphql",
+      // HTTP headers
+      headers: {
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        Authorization: `bearer ${process.env.GITHUB_TOKEN}`
+      },
+      // Additional options to pass to node-fetch
+      fetchOptions: {}
+    }
+  }
 ];
 if (
   config.header.search &&

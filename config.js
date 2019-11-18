@@ -26,7 +26,9 @@ const config = {
       "/Language",
       "/Database",
       "/DevelopmentEnvironment",
-      "/Change Log"
+      "/Web",
+      "/Git",
+      "/CommitLog"
     ],
     links: [{ text: "nukopy", link: "https://github.com/nukopy/" }],
     frontline: false,
