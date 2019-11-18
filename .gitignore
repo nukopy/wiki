@@ -1,6 +1,7 @@
 public
 .cache
 node_modules
+*.log
 *DS_Store
 *.env
 
