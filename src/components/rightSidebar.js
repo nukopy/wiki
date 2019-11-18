@@ -2,12 +2,12 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import styled from "react-emotion";
 import Link from "./link";
-import './styles.css';
-import config from '../../config';
+import "./styles.css";
+import config from "../../config";
 
 const forcedNavOrder = config.sidebar.forcedNavOrder;
 
-const Sidebar = styled('aside')`
+const Sidebar = styled("aside")`
   width: 100%;
   background-color: #fff;
   border-right: 1px solid #ede7f3;
@@ -85,21 +85,25 @@ const SidebarLayout = ({ location }) => (
       if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
         const navItems = allMdx.edges.map((item, index) => {
           let innerItems;
-          if(item !== undefined) {
-            if ((item.node.fields.slug === location.pathname) || (config.gatsby.pathPrefix + item.node.fields.slug) === location.pathname) {
+          if (item !== undefined) {
+            if (
+              item.node.fields.slug === location.pathname ||
+              config.gatsby.pathPrefix + item.node.fields.slug ===
+                location.pathname
+            ) {
               if (item.node.tableOfContents.items) {
-                innerItems = item.node.tableOfContents.items.map((innerItem, index) => {
-                  const itemId = innerItem.title ? innerItem.title.replace(/\s+/g, '').toLowerCase() : '#';
-                  return (
-                    <ListItem
-                      key={index}
-                      to={`#${itemId}`}
-                      level={1}
-                    >
-                      {innerItem.title}
-                    </ListItem>
-                  );
-                });
+                innerItems = item.node.tableOfContents.items.map(
+                  (innerItem, index) => {
+                    const itemId = innerItem.title
+                      ? innerItem.title.replace(/\s+/g, "").toLowerCase()
+                      : "#";
+                    return (
+                      <ListItem key={index} to={`#${itemId}`} level={1}>
+                        {innerItem.title}
+                      </ListItem>
+                    );
+                  }
+                );
               }
             }
           }
@@ -112,8 +116,8 @@ const SidebarLayout = ({ location }) => (
       if (finalNavItems && finalNavItems.length) {
         return (
           <Sidebar>
-            <ul className={'rightSideBarUL'}>
-              <div className={'rightSideTitle'}>CONTENTS</div>
+            <ul className={"rightSideBarUL"}>
+              <div className={"rightSideTitle"}>CONTENTS</div>
               {finalNavItems}
             </ul>
           </Sidebar>
