@@ -1,17 +1,9 @@
-import system from "@rebass/components/emotion";
+import styled from "@emotion/styled";
 
-const Text = system(
-  {
-    m: 0
-  },
-  "space",
-  "color",
-  "fontFamily",
-  "fontSize",
-  "fontWeight",
-  "textAlign",
-  "lineHeight"
-);
-Text.displayName = "Text";
+const Text = styled("p")({
+  lineHeight: 1.5,
+  marginTop: 3,
+  marginBottom: 4
+});
 
 export default Text;

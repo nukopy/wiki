@@ -1,68 +1,29 @@
 import React from "react";
-import Heading from "../heading";
-import Text from "./text";
+
+import AnchorTag from "./anchor";
 import Code from "./code";
 import CodeBlock from "./codeBlock";
+import Heading from "./heading";
+import List from "./list";
+import Text from "./text";
 import Pre from "./pre";
-import AnchorTag from "./anchor";
 
 export default {
-  h1: props => (
-    <Heading
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-      is="h1"
-      fontSize={[5, 6]}
-    />
-  ),
-  h2: props => (
-    <Heading
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-      is="h2"
-      fontSize={[4]}
-    />
-  ),
-  h3: props => (
-    <Heading
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-      is="h3"
-      fontSize={3}
-    />
-  ),
-  h4: props => (
-    <Heading
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-      is="h4"
-      fontSize={2}
-    />
-  ),
-  h5: props => (
-    <Heading
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-      is="h5"
-      fontSize={1}
-    />
-  ),
-  h6: props => (
-    <Heading
-      id={props.children.replace(/\s+/g, "").toLowerCase()}
-      {...props}
-      is="h6"
-      fontSize={0}
-    />
-  ),
-  p: props => <Text {...props} is="p" lineHeight={1.625} mt={3} mb={4} />,
+  h1: Heading.h1,
+  h2: Heading.h2,
+  h3: Heading.h3,
+  h4: Heading.h4,
+  h5: Heading.h5,
+  h6: Heading.h6,
+  p: Text,
+  // ul: List,
+  // ol: List,
   pre: Pre,
   code: CodeBlock,
   inlineCode: props => <Code {...props} />,
   a: props => <AnchorTag {...props} />
   // TODO add `img`
   // TODO add `blockquote`
-  // TODO add `ul`
-  // TODO add `li`
+
   // TODO add `table`
 };

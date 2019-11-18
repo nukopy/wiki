@@ -1,19 +1,8 @@
-import system from "@rebass/components/emotion";
+import styled from "@emotion/styled";
 
-const Pre = system(
-  {
-    is: "pre",
-    fontSize: 1,
-    // fontFamily: "mono",
-    m: 0
-  },
-  {
-    overflow: "auto",
-  },
-  "fontFamily",
-  "space",
-  "color"
-);
-Pre.displayName = "Pre";
+const Pre = styled("pre")({
+  margin: 0,
+  overflow: "auto"
+});
 
 export default Pre;

@@ -1,4 +1,4 @@
-import styled from "react-emotion";
+import styled from "@emotion/styled";
 
 const notificationTypes = {
   warning: {
@@ -18,12 +18,15 @@ const notificationTypes = {
 const getColor = (type = "info", shade = "dark") =>
   notificationTypes[type][shade];
 
-const Notification = styled('section')`
-  color: ${props => getColor(props.type, "light")};
-  background: ${props => getColor(props.type)};
+const NotificationStyle = props => css`
+  color: ${getColor(props.type, "light")};
+  background: ${getColor(props.type)};
   width: 100%;
   padding: 1rem;
   text-align: center;
+`;
+const Notification = styled("section")`
+  ${NotificationStyle}
 `;
 
 export default Notification;

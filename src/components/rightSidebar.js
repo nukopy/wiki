@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import styled from "react-emotion";
+import { css } from "@emotion/core";
+import styled from "@emotion/styled";
 import Link from "./link";
 import "./styles.css";
 import config from "../../config";
@@ -25,21 +26,14 @@ const Sidebar = styled("aside")`
   }
 `;
 
-// eslint-disable-next-line no-unused-vars
-const ListItem = styled(({ className, active, level, ...props }) => {
-    return (
-      <li className={className}>
-        <a href={props.to} {...props} />
-      </li>
-    );
-})`
+const ListItemStyle = (props, level) => css`
   list-style: none;
 
   a {
-    color: #5C6975;
+    color: #5c6975;
     text-decoration: none;
-    font-weight: ${({ level }) => (level === 0 ? 700 : 400)};
-    padding: 0.45rem 0 0.45rem ${props => 2 + (props.level || 0) * 1}rem;
+    font-weight: ${level === 0 ? 700 : 400};
+    padding: 0.45rem 0 0.45rem ${2 + (props.level || 0) * 1}rem;
     display: block;
     position: relative;
 
@@ -47,8 +41,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
       color: rgb(116, 76, 188) !important;
     }
 
-    ${props =>
-      props.active &&
+    ${props.active &&
       `
       color: #663399;
       border-color: rgb(230,236,241) !important;
@@ -61,6 +54,16 @@ const ListItem = styled(({ className, active, level, ...props }) => {
       margin-right: 1rem;
     }
   }
+`;
+
+const ListItem = styled(({ className, active, level, ...props }) => {
+  return (
+    <li className={className}>
+      <a href={props.to} {...props} />
+    </li>
+  );
+})`
+  ${ListItemStyle}
 `;
 
 const SidebarLayout = ({ location }) => (

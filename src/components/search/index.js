@@ -10,9 +10,10 @@ import {
 import algoliasearch from "algoliasearch/lite";
 import config from "../../../config.js";
 
-import styled, { css } from 'styled-components';
-import { PoweredBy } from "./styles"
-import { Search } from "styled-icons/fa-solid/Search"
+import { css } from "@emotion/core";
+import styled from "@emotion/styled";
+import { Search } from "emotion-icons/fa-solid";
+import { PoweredBy } from "./styles";
 import Input from "./input";
 import * as hitComps from "./hitComps";
 import "../styles.css";
@@ -22,8 +23,8 @@ const SearchIcon = styled(Search)`
   pointer-events: none;
 `;
 
-const HitsWrapper = styled.div`
-  display: ${props => (props.show ? `grid` : `none`)};
+const HitsWrapperStyle = props => css`
+  display: ${props.show ? `grid` : `none`};
   max-height: 80vh;
   overflow: scroll;
   z-index: 2;
@@ -36,15 +37,15 @@ const HitsWrapper = styled.div`
   box-shadow: 0 0 5px 0;
   padding: 0.7em 1em 0.4em;
   background: white;
-  border-radius: ${props => props.theme.smallBorderRadius};
+  border-radius: ${props.theme.smallBorderRadius};
   > * + * {
     padding-top: 1em !important;
-    border-top: 2px solid ${props => props.theme.darkGray};
+    border-top: 2px solid ${props.theme.darkGray};
   }
   li + li {
     margin-top: 0.7em;
     padding-top: 0.7em;
-    border-top: 1px solid ${props => props.theme.lightGray};
+    border-top: 1px solid ${props.theme.lightGray};
   }
   * {
     margin-top: 0;
@@ -55,8 +56,8 @@ const HitsWrapper = styled.div`
     list-style: none;
   }
   mark {
-    color: ${props => props.theme.lightBlue};
-    background: ${props => props.theme.darkBlue};
+    color: ${props.theme.lightBlue};
+    background: ${props.theme.darkBlue};
   }
   header {
     display: flex;
@@ -64,9 +65,9 @@ const HitsWrapper = styled.div`
     margin-bottom: 0.3em;
     h3 {
       color: black;
-      background: ${props => props.theme.gray};
+      background: ${props.theme.gray};
       padding: 0.1em 0.4em;
-      border-radius: ${props => props.theme.smallBorderRadius};
+      border-radius: ${props.theme.smallBorderRadius};
     }
   }
   h3 {
@@ -78,19 +79,23 @@ const HitsWrapper = styled.div`
     margin-bottom: 0.3em;
   }
 `;
-const Root = styled.div`
+const HitsWrapper = styled("div")`
+  ${HitsWrapperStyle}
+`;
+
+const Root = styled("div")`
   position: relative;
   display: grid;
   grid-gap: 1em;
 `;
 
-const focus = css`
+const focus = props => css`
   background: white;
-  color: ${props => props.theme.darkBlue};
+  color: ${props.theme.darkBlue};
   cursor: text;
   width: 5em;
   + ${SearchIcon} {
-    color: ${props => props.theme.darkBlue};
+    color: ${props.theme.darkBlue};
     margin: 0.3em;
   }
 `;

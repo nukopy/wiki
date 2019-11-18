@@ -1,40 +1,43 @@
 import React from "react";
 import { connectSearchBox } from "react-instantsearch-dom";
 
-import styled, { css } from "styled-components";
-import { Search } from "styled-icons/fa-solid/Search";
+import { css } from "@emotion/core";
+import styled from "@emotion/styled";
+import { Search } from "emotion-icons/fa-solid";
 
 const SearchIcon = styled(Search)`
   width: 1em;
   pointer-events: none;
   margin-right: 10px;
 `;
-const focus = css`
+
+const focus = props => css`
   background: white;
-  color: ${props => props.theme.darkBlue};
+  color: ${props.theme.darkBlue};
   cursor: text;
   width: 5em;
   + ${SearchIcon} {
-    color: ${props => props.theme.darkBlue};
+    color: ${props.theme.darkBlue};
     margin: 0.3em;
   }
 `;
-const collapse = css`
+
+const collapse = props => css`
   width: 0;
   cursor: pointer;
-  color: ${props => props.theme.lightBlue};
+  color: ${props.theme.lightBlue};
   + ${SearchIcon} {
     color: white;
   }
-  ${props => props.focus && focus}
-  margin-left: ${props => (props.focus ? `-1.6em` : `-1em`)};
-  padding-left: ${props => (props.focus ? `1.6em` : `1em`)};
+  ${props.focus && focus}
+  margin-left: ${props.focus ? `-1.6em` : `-1em`};
+  padding-left: ${props.focus ? `1.6em` : `1em`};
   ::placeholder {
-    color: ${props => props.theme.gray};
+    color: ${props.theme.gray};
   }
 `;
-const expand = css`
-  background: ${props => props.theme.veryLightGray};
+const expand = props => css`
+  background: ${props.theme.veryLightGray};
   width: 6em;
   margin-left: -1.6em;
   padding-left: 1.6em;
@@ -42,17 +45,21 @@ const expand = css`
     margin: 0.3em;
   }
 `;
-const Input = styled.input`
+
+const InputStyle = props => css`
   outline: none;
   border: none;
   font-size: 1em;
   background: white;
-  transition: ${props => props.theme.shortTrans};
-  border-radius: ${props => props.theme.smallBorderRadius};
-  {hightlight-next-line}
-  ${props => (props.collapse ? collapse : expand)};
+  transition: ${props.theme.shortTrans};
+  border-radius: ${props.theme.smallBorderRadius};
+  ${props.collapse ? collapse : expand};
 `;
-const Form = styled.form`
+const Input = styled("input")`
+  ${InputStyle}
+`;
+
+const Form = styled("form")`
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
