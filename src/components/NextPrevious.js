@@ -43,11 +43,13 @@ class NextPrevious extends React.Component {
       // any other page
       nextInfo.url = nav[currentIndex + 1].url;
       nextInfo.title = nav[currentIndex + 1].title;
+
       if (nav[currentIndex - 1]) {
         previousInfo.url = nav[currentIndex - 1].url;
         previousInfo.title = nav[currentIndex - 1].title;
       }
     }
+
     return (
       <div className={"nextPreviousWrapper"}>
         {previousInfo.url && currentIndex >= 0 ? (
