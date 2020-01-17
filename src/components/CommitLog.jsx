@@ -21,7 +21,7 @@ const CommitLog = () => {
             target {
               ... on GitHub_Commit {
                 id
-                history(first: 5) {
+                history(first: 10) {
                   edges {
                     node {
                       id
