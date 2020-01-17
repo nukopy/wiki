@@ -3,10 +3,14 @@ import config from '../../../config';
 import TreeNode from './treeNode';
 
 const calculateTreeData = edges => {
-  const originalData = config.sidebar.ignoreIndex ? edges.filter(({node: {fields: {slug}}}) => slug !== '/') : edges;
+  const originalData =
+    config.sidebar.ignoreIndex ?
+      edges.filter(({node: {fields: {slug}}}) => slug !== '/') :
+      edges;
   const tree = originalData.reduce((accu, {node: {fields: {slug, title}}}) => {
     const parts = slug.split('/');
     let {items: prevItems} = accu;
+
     for (const part of parts.slice(1, -1)) {
       let tmp = prevItems.find(({label}) => label == part);
       if (tmp) {
@@ -19,6 +23,7 @@ const calculateTreeData = edges => {
       }
       prevItems = tmp.items;
     }
+
     const existingItem = prevItems.find(({label}) => label === parts[parts.length - 1]);
     if (existingItem) {
       existingItem.url = slug;
@@ -31,8 +36,10 @@ const calculateTreeData = edges => {
         title
       });
     }
+
     return accu;
   }, {items: []});
+
   const {sidebar: {forcedNavOrder = []}} = config;
   const tmp = [...forcedNavOrder];
   tmp.reverse();
