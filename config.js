@@ -28,6 +28,8 @@ const config = {
       "/DevelopmentEnvironment",
       "/Web",
       "/Git",
+      "/TechnicalTerms",
+      "/Service",
       "/CommitLog"
     ],
     links: [{ text: "nukopy", link: "https://github.com/nukopy/" }],
