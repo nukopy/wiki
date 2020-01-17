@@ -4,7 +4,7 @@ metaTitle: "Wiki - Tips"
 metaDescription: "Some tips"
 ---
 
-各種 tips．メモ書きに使う．
+各種 tips，忘れやすそうな操作のメモ書き．
 
 ## Wiki の編集
 
@@ -63,3 +63,14 @@ const config = {
 ### エラー処理
 
 ローカル環境で開発時，mdx で React コンポーネントを新しく組み込んだ際のビルドにて Webpack などのエラーが出るときは，`wiki/.cache` を消して再度ビルドするとうまくいくことがある．
+
+### Markdown のデザインの編集
+
+基本的には，Chrome の Inspect（Dev Tool）でコンポーネントの構成を見れば，各要素のデザインがどのコード由来なのか（CSS ファイル, CSS in JS，など）見当がつけられる．
+
+--
+
+探すのが面倒だったデザインの由来を以下に列挙しておく．
+
+- `src/mdxComponents` 配下のファイルが Markdown の設定を担っている
+  - `src/mdxComponents/heading.js`: 見出し要素 `h1`, `h2`, ... の設定
