@@ -30,6 +30,7 @@ const config = {
       "/Git",
       "/TechnicalTerms",
       "/Service",
+      "/Tips",
     ],
     links: [{ text: "nukopy", link: "https://github.com/nukopy/" }],
     frontline: false,
