@@ -40,7 +40,7 @@ const config = {
     title: "nukopy's Wiki",
     description: "Wiki built with mdx, GatsbyJS.",
     ogImage: null,
-    docsLocation: "https://github.com/nukopy/wiki/",
+    docsLocation: "https://github.com/nukopy/wiki",
     favicon: "https://avatars3.githubusercontent.com/u/42367320?s=460&v=4"
   }
 };
