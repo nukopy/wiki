@@ -73,7 +73,16 @@ const Tree = ({edges}) => {
   const [treeData] = useState(() => {
     return calculateTreeData(edges);
   });
-  const [collapsed, setCollapsed] = useState({});
+  const [collapsed, setCollapsed] = useState({
+    // Edit here WHEN the order of right sidebar is changed or new chapter is added in `config.js`.
+    '/Language': true,
+    '/Database': true,
+    '/DevelopmentEnvironment': true,
+    '/Web': true,
+    '/Git': true,
+    '/TechnicalTerms': true,
+    '/Service': true,
+  });
   const toggle = (url) => {
     setCollapsed({
       ...collapsed,
@@ -90,4 +99,4 @@ const Tree = ({edges}) => {
   );
 }
 
-export default Tree 
+export default Tree
