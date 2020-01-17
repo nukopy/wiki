@@ -29,7 +29,7 @@ class NextPrevious extends React.Component {
         : null;
       previousInfo.url = null;
       previousInfo.title = null;
-    } else if (currentIndex === nav.length - 2) {
+    } else if (currentIndex === nav.length - 1) {
       // last page
       nextInfo.url = null;
       nextInfo.title = null;
