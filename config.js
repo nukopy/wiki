@@ -39,7 +39,7 @@ const config = {
   siteMetadata: {
     title: "nukopy's Wiki",
     description: "Wiki built with mdx, GatsbyJS.",
-    ogImage: null,
+    ogImage: "https://avatars3.githubusercontent.com/u/42367320?s=460&v=4",
     docsLocation: "https://github.com/nukopy/wiki",
     favicon: "https://avatars3.githubusercontent.com/u/42367320?s=460&v=4"
   }
