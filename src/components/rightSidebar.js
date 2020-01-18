@@ -97,11 +97,8 @@ const SidebarLayout = ({ location }) => (
               if (item.node.tableOfContents.items) {
                 innerItems = item.node.tableOfContents.items.map(
                   (innerItem, index) => {
-                    const itemId = innerItem.title
-                      ? innerItem.title.replace(/\s+/g, "").toLowerCase()
-                      : "#";
                     return (
-                      <ListItem key={index} to={`#${itemId}`} level={1}>
+                      <ListItem key={index} to={`#${innerItem.title}`} level={1}>
                         {innerItem.title}
                       </ListItem>
                     );

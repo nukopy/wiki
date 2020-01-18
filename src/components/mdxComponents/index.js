@@ -10,7 +10,10 @@ import Pre from "./pre";
 
 export default {
   h1: Heading.h1,
-  h2: Heading.h2,
+  h2: props => {
+    console.log(props);
+    return <Heading.h2 id={props.children}>{props.children}</Heading.h2>;
+  },
   h3: Heading.h3,
   h4: Heading.h4,
   h5: Heading.h5,
