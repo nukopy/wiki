@@ -4,8 +4,10 @@ import { graphql } from "gatsby";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import styled from "@emotion/styled";
 import { injectGlobal } from "emotion";
+
 import Link from "../components/link";
 import Layout from "../components/layout";
+import TableOfContents from "../components/myMdxComponents/TableOfContents";
 import NextPrevious from "../components/NextPrevious";
 import "../components/styles.css";
 import config from "../../config";
@@ -162,6 +164,7 @@ export default class MDXRuntimeTest extends Component {
           </Edit>
         </div>
         <div className={"mainWrapper"}>
+          <TableOfContents />
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
         <div className={"addPaddTopBottom"}>
