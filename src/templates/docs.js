@@ -164,7 +164,7 @@ export default class MDXRuntimeTest extends Component {
           </Edit>
         </div>
         <div className={"mainWrapper"}>
-          <TableOfContents />
+          <TableOfContents location={this.props.location} />
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>
         <div className={"addPaddTopBottom"}>

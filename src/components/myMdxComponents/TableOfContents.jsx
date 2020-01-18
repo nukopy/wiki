@@ -25,7 +25,7 @@ const ListItem = ({level, ...props}) => {
   );
 };
 
-const TableOfContents = () => (
+const TableOfContents = ({ location }) => (
   <StaticQuery
     query={graphql`
       query {
