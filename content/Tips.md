@@ -74,3 +74,64 @@ const config = {
 
 - `src/mdxComponents` 配下のファイルが Markdown の設定を担っている
   - `src/mdxComponents/heading.js`: 見出し要素 `h1`, `h2`, ... の設定
+
+### MDX の設定
+
+コンポーネント `MDXProvider` の props に，Markdown を変換する際の設定のためのオブジェクトを渡すことで，レンダリングされる Markdown の装飾を変えることができる．
+
+現状では，以下のようなオブジェクトが
+
+- `src/components/mdxComponents/index.js`
+
+Markdown がどのようにレンダリングされるかを変えたい場合は，このファイル内で読み込まれている各種設定ファイル（`./anchor.js`, `./code.js` など）を編集すれば良い．
+
+```js
+import React from "react";
+
+import AnchorTag from "./anchor";
+import Code from "./code";
+import CodeBlock from "./codeBlock";
+import Heading from "./heading";
+import List from "./list";
+import Text from "./text";
+import Pre from "./pre";
+
+export default {
+  h1: Heading.h1,
+  h2: Heading.h2,
+  h3: Heading.h3,
+  h4: Heading.h4,
+  h5: Heading.h5,
+  h6: Heading.h6,
+  p: Text,
+  // ul: List,
+  // ol: List,
+  pre: Pre,
+  code: CodeBlock,
+  inlineCode: props => <Code {...props} />,
+  a: props => <AnchorTag {...props} />
+  // TODO add `img`
+  // TODO add `blockquote`
+
+  // TODO add `table`
+};
+```
+
+- `src/components/layout.js`
+
+`MDXProvider` に設定を渡している部分を抽出．
+
+```js
+import React from "react";
+import { MDXProvider } from "@mdx-js/react";
+import mdxComponents from "./mdxComponents";  // mdxComponents/index.js を読み込み
+...
+const Layout = ({ children, location }) => (
+  <ThemeProvider location={location}>
+    <MDXProvider components={mdxComponents}>
+      ...
+    </MDXProvider>
+  </ThemeProvider>
+);
+...
+```
