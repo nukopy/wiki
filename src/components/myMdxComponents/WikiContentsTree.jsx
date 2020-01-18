@@ -7,7 +7,7 @@ import Link from "../link";
 const isLocal = false;
 const host = isLocal ? "http://localhost:8000": "https://nukopy-wiki.netlify.com";
 
-const TableOfContents = ({ location }) => (
+const WikiContentsTree = ({ location }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -49,4 +49,4 @@ const TableOfContents = ({ location }) => (
   />
 );
 
-export default TableOfContents;
+export default WikiContentsTree;
