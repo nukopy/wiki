@@ -27,11 +27,12 @@ const TableOfContents = ({ location }) => (
       return (
         <>
           <ul>
-            {allMdx.edges.map(edge => {
+            {allMdx.edges.map((edge, idx) => {
               const title = edge.node.fields.title;
               const path = edge.node.fields.slug;
+
               return (
-                <li>
+                <li key={`${idx}-${path}`}>
                   <Link to={host + path}>
                     {title}
                   </Link>
