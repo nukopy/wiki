@@ -18,12 +18,15 @@ const TableOfContents = ({ location }) => (
                 slug
                 title
               }
+              tableOfContents
             }
           }
         }
       }
     `}
     render={({ allMdx }) => {
+      console.log(allMdx);
+
       return (
         <>
           <ul>
