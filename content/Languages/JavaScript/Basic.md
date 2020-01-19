@@ -1,6 +1,6 @@
 ---
 title: "Basic"
-metaTitle: "JavaScript - Basic"
+metaTitle: "Basic | JavaScript"
 metaDescription: "JavaScript Libraries tips."
 ---
 

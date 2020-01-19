@@ -1,6 +1,6 @@
 ---
 title: "Node.js"
-metaTitle: "JavaScript - Node.js"
+metaTitle: "Node.js | JavaScript"
 metaDescription: "JavaScript Node.js tips."
 ---
 

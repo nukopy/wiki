@@ -1,6 +1,6 @@
 ---
 title: "Web"
-metaTitle: "Wiki - Web"
+metaTitle: "Web | Wiki"
 metaDescription: "Web tips"
 ---
 

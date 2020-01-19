@@ -1,7 +1,7 @@
 ---
 
 title: "MySQL"
-metaTitle: "Database - MySQL"
+metaTitle: "MySQL | Database"
 metaDescription: "MySQL tips"
 
 ---

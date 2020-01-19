@@ -1,6 +1,6 @@
 ---
 title: "PHP"
-metaTitle: "Language - PHP"
+metaTitle: "PHP | Languages"
 metaDescription: "PHP tips"
 ---
 

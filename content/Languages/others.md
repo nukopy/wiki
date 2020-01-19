@@ -1,7 +1,7 @@
 ---
 title: "others"
-metaTitle: "Language - others"
-metaDescription: "CSS tips"
+metaTitle: "others | Languages"
+metaDescription: "Other languages tips"
 ---
 
 ## HTML

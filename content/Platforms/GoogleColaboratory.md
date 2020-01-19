@@ -1,6 +1,6 @@
 ---
 title: "Google Colaboratory"
-metaTitle: "Service - Google Colaboratory"
+metaTitle: "Google Colaboratory | Platforms"
 metaDescription: "Google Colaboratory"
 ---
 

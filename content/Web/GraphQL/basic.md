@@ -1,6 +1,6 @@
 ---
 title: "basic"
-metaTitle: "GraphQL - basic"
+metaTitle: "Basic | GraphQL"
 metaDescription: "GraphQL tips."
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "REST API"
-metaTitle: "Web - REST API"
+metaTitle: "REST API | Web"
 metaDescription: "REST API tips."
 ---
 

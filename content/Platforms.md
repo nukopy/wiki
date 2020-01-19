@@ -1,6 +1,6 @@
 ---
-title: "Service"
-metaTitle: "Wiki - Service"
+title: "Platforms"
+metaTitle: "Platforms | Wiki"
 metaDescription: "Service tips."
 ---
 

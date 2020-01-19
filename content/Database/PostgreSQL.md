@@ -1,7 +1,7 @@
 ---
 
 title: "PostgreSQL"
-metaTitle: "Database - PostgreSQL"
+metaTitle: "PostgreSQL | Database"
 metaDescription: "PostgreSQL tips"
 
 ---

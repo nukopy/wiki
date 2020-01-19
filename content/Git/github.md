@@ -1,7 +1,7 @@
 ---
 title: "GitHub"
-metaTitle: "Git - GitHub"
-metaDescription: "GitHub tips."
+metaTitle: "GitHub | Git"
+metaDescription: "GitHub tips"
 ---
 
 GitHub tips.

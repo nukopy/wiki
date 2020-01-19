@@ -1,7 +1,7 @@
 ---
 
 title: "Docker"
-metaTitle: "Dev. Env. - Docker"
+metaTitle: "Docker | Dev. Env."
 metaDescription: "Docker tips"
 
 ---

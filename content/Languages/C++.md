@@ -1,6 +1,6 @@
 ---
 title: "C++"
-metaTitle: "Language - C++"
+metaTitle: "C++ | Languages"
 metaDescription: "C++ tips"
 ---
 

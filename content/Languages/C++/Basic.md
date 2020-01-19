@@ -1,8 +1,9 @@
 ---
 
 title: "Basic"
-metaTitle: "C++ Basic"
+metaTitle: "Basic | C++"
 metaDescription: "C++ Basic"
 
 ---
 
+C++ basic.

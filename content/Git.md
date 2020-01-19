@@ -1,6 +1,6 @@
 ---
 title: "Git"
-metaTitle: "Wiki - Git"
+metaTitle: "Git | Wiki"
 metaDescription: "Git tips."
 ---
 

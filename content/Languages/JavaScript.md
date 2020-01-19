@@ -1,6 +1,6 @@
 ---
 title: "JavaScript"
-metaTitle: "Language - JavaScript"
+metaTitle: "JavaScript | Languages"
 metaDescription: "JavaScript tips"
 ---
 

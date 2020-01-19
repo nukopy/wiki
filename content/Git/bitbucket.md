@@ -1,6 +1,6 @@
 ---
 title: "Bitbucket"
-metaTitle: "Git - Bitbucket"
+metaTitle: "Bitbucket | Git"
 metaDescription: "Bitbucket tips."
 ---
 

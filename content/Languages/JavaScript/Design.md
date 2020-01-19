@@ -1,6 +1,6 @@
 ---
 title: "Design"
-metaTitle: "JavaScript - Design"
+metaTitle: "Design | JavaScript"
 metaDescription: "JavaScript design tips."
 ---
 

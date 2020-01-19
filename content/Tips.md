@@ -1,6 +1,6 @@
 ---
 title: "Tips"
-metaTitle: "Wiki - Tips"
+metaTitle: "Tips | Wiki"
 metaDescription: "Some tips"
 ---
 

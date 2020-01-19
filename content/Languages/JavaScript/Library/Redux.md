@@ -1,6 +1,6 @@
 ---
 title: "Redux"
-metaTitle: "JavaScript - Library - Redux"
+metaTitle: "Redux | JavaScript - Library"
 metaDescription: "Redux tips"
 ---
 

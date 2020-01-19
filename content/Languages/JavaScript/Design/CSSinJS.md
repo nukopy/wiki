@@ -1,7 +1,7 @@
 ---
 title: "CSS in JS"
-metaTitle: "JavaScript - Library - CSS in JS"
-metaDescription: "$2"
+metaTitle: "CSS in JS | JavaScript - Design"
+metaDescription: "CSS in JS tips"
 ---
 
 ## What is "CSS-in-JS"?

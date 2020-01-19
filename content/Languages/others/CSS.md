@@ -1,6 +1,6 @@
 ---
 title: "CSS"
-metaTitle: "Language - CSS"
+metaTitle: "CSS | Languages - others"
 metaDescription: "CSS tips"
 ---
 

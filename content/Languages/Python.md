@@ -1,10 +1,7 @@
 ---
 title: "Python"
-metaTitle: "Language - Python"
-metaDescription: "Python knowledge"
+metaTitle: "Python | Languages"
+metaDescription: "Python tips"
 ---
 
-# Python
-
-- hoge
-  hoge
+Python tips

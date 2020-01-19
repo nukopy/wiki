@@ -1,6 +1,6 @@
 ---
 title: "Technical Terms"
-metaTitle: "Wiki - Technical Terms"
+metaTitle: "Technical Terms | Wiki"
 metaDescription: "技術用語のメモ"
 ---
 

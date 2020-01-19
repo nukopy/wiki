@@ -1,13 +1,13 @@
 ---
 
 title: "Vagrant"
-metaTitle: "Dev. Env. - Vagrant"
+metaTitle: "Vagrant | Dev. Env."
 metaDescription: "Vagrant tips"
 
 ---
 
 Vagrant tips.
 
-## basic
+## Basic
 
 ## Vagrantfile

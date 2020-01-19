@@ -1,6 +1,6 @@
 ---
 title: "Development Environment"
-metaTitle: "Wiki - Development Environment"
+metaTitle: "Development Environment | Wiki"
 metaDescription: "Development environment tips"
 ---
 

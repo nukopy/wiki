@@ -1,6 +1,6 @@
 ---
 title: "HTML"
-metaTitle: "Language - HTML"
+metaTitle: "HTML | Languages - others"
 metaDescription: "HTML tips"
 ---
 

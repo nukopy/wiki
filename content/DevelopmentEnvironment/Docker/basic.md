@@ -1,12 +1,12 @@
 ---
 
-title: "basic"
-metaTitle: "Docker - basic"
+title: "Basic"
+metaTitle: "Basic | Dev. Env. - Docker"
 metaDescription: "Docker basic tips"
 
 ---
 
-Docker basic
+Docker basic.
 
-## basic
+## Basic
 

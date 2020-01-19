@@ -1,7 +1,7 @@
 ---
-title: "Language"
-metaTitle: "Wiki - Language"
-metaDescription: "Individual Language tips"
+title: "Languages"
+metaTitle: "Languages | Wiki"
+metaDescription: "Programming Language tips"
 ---
 
 Individual language tips.

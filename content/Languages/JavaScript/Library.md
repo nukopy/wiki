@@ -1,6 +1,6 @@
 ---
 title: "Library"
-metaTitle: "JavaScript - Library"
+metaTitle: "Library | JavaScript"
 metaDescription: "JavaScript Libraries tips."
 ---
 

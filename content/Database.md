@@ -1,6 +1,6 @@
 ---
 title: "Database"
-metaTitle: "Wiki - Database"
+metaTitle: "Database | Wiki"
 metaDescription: "Database tips"
 ---
 

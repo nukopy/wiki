@@ -1,6 +1,6 @@
 ---
-title: "command"
-metaTitle: "Git - command"
+title: "Command"
+metaTitle: "Command | Git"
 metaDescription: "Git command tips."
 ---
 

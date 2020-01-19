@@ -1,7 +1,7 @@
 ---
 title: "React"
-metaTitle: "JavaScript - Library - React"
-metaDescription: "React tips."
+metaTitle: "React | JavaScript - Library"
+metaDescription: "React tips"
 ---
 
 ### Styling and CSS
