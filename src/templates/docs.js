@@ -101,7 +101,7 @@ export default class MDXRuntimeTest extends Component {
     this.waitForGlobal('MathJax').then(() => {
       top.MathJax.Hub.Config({
         tex2jax: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          // inlineMath: [['$', '$'], ['\\(', '\\)']],
           displayMath: [['$$', '$$'], ['[', ']']],
           processEscapes: true,
           processEnvironments: true,
