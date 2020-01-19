@@ -12,9 +12,12 @@ metaDescription: "Some tips"
 
 1. VSCode で `wiki` のプロジェクトディレクトリを開く．
 2. （初回のみ）ターミナルで `yarn install`（Command Line Tools，というより C/C++ コンパイラが必要）を実行し，GatbyJS などの npm パッケージをインストール．
-3. `yarn start` を実行し，`http://localhost:8000/` を開いて編集スタート（ホットリロードが有効）．
+3. `yarn start` を実行し，`http://localhost:8000/` を開く．
+4. `wiki/content/` 配下の Markdown を編集する編集スタート（ホットリロードが有効）．
 
-Wiki のコンテンツは `wiki/content/` 配下にあり，Markdown，MDX（React コンポーネントを Markdown に組み込む）で編集可能．
+（必要であれば `src/components/myMdxComponents/WikiContentsTree.jsx` のフラグ `isLocal` を `true` にしてから編集を始める）
+
+Wiki のコンテンツは `wiki/content/` 配下にあるが，Markdown と MDX（React コンポーネントを Markdown に組み込む）による編集が可能である．
 
 ### サイドバーに項目を追加したい時
 
