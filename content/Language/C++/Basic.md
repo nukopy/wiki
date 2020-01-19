@@ -6,4 +6,3 @@ metaDescription: "C++ Basic"
 
 ---
 
-hoge
