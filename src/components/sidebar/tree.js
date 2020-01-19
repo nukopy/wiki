@@ -89,6 +89,7 @@ const Tree = ({edges}) => {
     '/Git': true,
     '/TechnicalTerms': true,
     '/Platforms': true,
+    '/IDE': true,
   });
   const toggle = (url) => {
     setCollapsed({
