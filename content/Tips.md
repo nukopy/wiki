@@ -31,7 +31,7 @@ wiki/content
   - NewContent.md
 ```
 
-2．`config.js` の編集．
+2．`config.js` の編集
 
 `sidebar.forcedNavOrder`（サイドバーの表示順序の設定）に新しい項目 `/NewContent` を任意の位置に加える．
 
@@ -57,6 +57,24 @@ const config = {
   },
   ...
 }
+```
+
+2．`src/components/sidebar/tree.js` の編集
+
+コンポーネント `Tree` 内の Hooks `setCollapsed` の初期値に，新しい項目の設定を加える．
+
+```js
+const [collapsed, setCollapsed] = useState({
+  // Edit here WHEN the order of right sidebar is changed or new chapter is added in `config.js`.
+  '/Language': true,
+  '/Database': true,
+  '/DevelopmentEnvironment': true,
+  '/Web': true,
+  '/Git': true,
+  '/TechnicalTerms': true,
+  '/Service': true,
++ '/NewContent': true,
+});
 ```
 
 3．再度ビルドを実行して新しい項目が `config.js` に設定した表示順序通りに表示されてれば OK．
