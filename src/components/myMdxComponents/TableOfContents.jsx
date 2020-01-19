@@ -7,15 +7,15 @@ import config from "../../../config";
 const TableOfContentsBox = styled("div")`
   background-color: #dbdee7;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 `;
 
 const TableOfContentsTitle = styled("h3")`
+  font-size: 16px;
   padding: 0px;
   margin: 0px;
 `
-
-// background-color: #e6e7e4;
 
 const ListItem = ({level, ...props}) => {
   return (
@@ -45,6 +45,7 @@ const TableOfContents = ({ location }) => (
     render={({ allMdx }) => {
       let navItems = [];
       let finalNavItems;
+      // console.log(allMdx.edges);
 
       if (allMdx.edges !== undefined && allMdx.edges.length > 0) {
         const navItems = allMdx.edges.map((item, index) => {
@@ -78,7 +79,7 @@ const TableOfContents = ({ location }) => (
       if (finalNavItems && finalNavItems.length) {
         return (
           <TableOfContentsBox>
-            <TableOfContentsTitle>Table Of Contents</TableOfContentsTitle>
+            {/* <TableOfContentsTitle>Contents</TableOfContentsTitle> */}
             <ul>
               {finalNavItems}
             </ul>
