@@ -23,13 +23,13 @@ const config = {
   sidebar: {
     forcedNavOrder: [
       "/Home",
-      "/Language",
+      "/Languages",
       "/Database",
       "/DevelopmentEnvironment",
       "/Web",
       "/Git",
       "/TechnicalTerms",
-      "/Service",
+      "/Platforms",
       "/Tips",
     ],
     links: [{ text: "nukopy", link: "https://github.com/nukopy/" }],
