@@ -74,6 +74,57 @@ const Edit = styled("div")`
 `;
 
 export default class MDXRuntimeTest extends Component {
+  waitForGlobal(name, timeout = 300) {
+    return new Promise((resolve, reject) => {
+      let waited = 0
+
+      function wait(interval) {
+        setTimeout(() => {
+          waited += interval
+          // some logic to check if script is loaded
+          // usually it something global in window object
+          if (window[name] !== undefined) {
+            return resolve()
+          }
+          if (waited >= timeout * 1000) {
+            return reject({ message: 'Timeout' })
+          }
+          wait(interval * 2)
+        }, interval)
+      }
+
+      wait(30)
+    })
+  }
+
+  componentDidMount() {
+    this.waitForGlobal('MathJax').then(() => {
+      top.MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['[', ']']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: {
+            equationNumbers: { autoNumber: 'AMS' },
+            extensions: ['AMSmath.js', 'AMSsymbols.js'],
+          },
+        },
+      })
+    });
+
+    if (top.MathJax != null) {
+      top.MathJax.Hub.Queue(['Typeset', top.MathJax.Hub])
+    }
+  }
+
+  componentDidUpdate() {
+    if (top.MathJax != null) {
+      top.MathJax.Hub.Queue(['Typeset', top.MathJax.Hub])
+    }
+  }
+
   render() {
     const { data } = this.props;
     const {
@@ -150,6 +201,7 @@ export default class MDXRuntimeTest extends Component {
             <meta property="twitter:description" content={metaDescription} />
           ) : null}
           <link rel="canonical" href={canonicalUrl} />
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
         </Helmet>
         <div className={"titleWrapper"}>
           <h1 className={"title"}>{mdx.fields.title}</h1>

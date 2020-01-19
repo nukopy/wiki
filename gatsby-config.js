@@ -65,7 +65,15 @@ const plugins = [
       // Additional options to pass to node-fetch
       fetchOptions: {}
     }
-  }
+  },
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        `gatsby-remark-mathjax`,
+      ],
+    },
+  },
 ];
 if (
   config.header.search &&
