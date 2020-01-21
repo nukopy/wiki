@@ -73,6 +73,19 @@ const Edit = styled("div")`
   }
 `;
 
+const FooterStyle = styled("div")`
+  text-align: center;
+  padding: 10px;
+`;
+
+const Footer = () => {
+  return (
+    <FooterStyle>
+      <small>&copy; 2019 nukopy All Rights Reserved.</small>
+    </FooterStyle>
+  )
+}
+
 export default class MDXRuntimeTest extends Component {
   waitForGlobal(name, timeout = 300) {
     return new Promise((resolve, reject) => {
@@ -222,6 +235,7 @@ export default class MDXRuntimeTest extends Component {
         <div className={"addPaddTopBottom"}>
           <NextPrevious mdx={mdx} nav={nav} />
         </div>
+        <Footer />
       </Layout>
     );
   }
