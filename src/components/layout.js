@@ -25,6 +25,7 @@ const Content = styled("main")`
 
   @media only screen and (max-width: 1023px) {
     padding-left: 10px;
+    padding-right: 10px;
     margin: 0 10px;
     padding-top: 2rem;
   }

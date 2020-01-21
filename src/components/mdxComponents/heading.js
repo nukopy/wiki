@@ -12,11 +12,17 @@ const Heading = {
     borderBottom: `solid 2px black`
   }),
   h3: styled("h3")({
-    fontSize: 22.5,
-    borderBottom: `dashed 1.5px ${borderColor}`
+    fontSize: 25,
+    borderBottom: `dashed 2px ${borderColor}`
   }),
-  h4: styled("h4")({}),
-  h5: styled("h5")({}),
+  h4: styled("h4")({
+    fontSize: 20,
+    fontWeight: 'bold',
+    borderBottom: `dotted 0.5px ${borderColor}`
+  }),
+  h5: styled("h5")({
+    fontSize: 17.5,
+  }),
   h6: styled("h6")({})
 };
 
