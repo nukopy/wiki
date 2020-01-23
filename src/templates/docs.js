@@ -188,9 +188,8 @@ export default class MDXRuntimeTest extends Component {
     // meta tags
     const metaTitle = mdx.frontmatter.metaTitle;
     const metaDescription = mdx.frontmatter.metaDescription;
-    const metaOgImg = config.ogImage;
+    const metaOgImage = config.ogImage;
     const metaTwitterCard = config.siteMetadata.twitterCard;
-    const metaTwitterCardLarge = config.siteMetadata.twitterCardLarge;
     let canonicalUrl = config.gatsby.siteUrl;
     canonicalUrl =
       config.gatsby.pathPrefix !== "/"
@@ -216,10 +215,9 @@ export default class MDXRuntimeTest extends Component {
           {metaDescription ? (
             <meta property="twitter:description" content={metaDescription} />
           ) : null}
-          {metaOgImg ? (
-            <meta property="og:image" content={metaOgImg} />
+          {metaOgImage ? (
+            <meta property="og:image" content={metaOgImage} />
           ) : null}
-          {/* cf: Twitter Card: https://saruwakakun.com/html-css/reference/twitter-card#section1 */}
           {metaTwitterCard ? (
             <meta name="twitter:card" content="summary" />
             /* Card Large <meta name="twitter:card" content="summary_large_image"> */

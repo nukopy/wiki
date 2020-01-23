@@ -42,7 +42,7 @@ const config = {
     description: "Wiki built with mdx, GatsbyJS.",
     ogImage: "https://nukopy-wiki.s3-ap-northeast-1.amazonaws.com/twitter_card.jpeg",
     docsLocation: "https://github.com/nukopy/wiki",
-    twitterCard: "",
+    twitterCard: "https://nukopy-wiki.s3-ap-northeast-1.amazonaws.com/twitter_card.jpeg",
     twitterCardLarge: "",
     favicon: "https://avatars3.githubusercontent.com/u/42367320?s=460&v=4"
   }
