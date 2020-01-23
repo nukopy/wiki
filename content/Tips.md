@@ -156,3 +156,31 @@ const Layout = ({ children, location }) => (
 );
 ...
 ```
+
+### レイアウトの変更
+
+レイアウトの変更は，以下のファイル内に定義されたコンポーネントの実装を確認すれば良い．親子関係がある．
+
+- `templates/docs.js`
+  - `components/layout.js`
+
+`meta` タグ，タイトル，Table Of Contents などは `templates/docs.js`，Wiki のテーマは `components/layout.js` のコンポーネントを編集すれば良い．
+
+### メタデータの編集
+
+メタデータは，`wiki/config.js` の `config.siteMetadata` を編集すれば良い．
+
+```js
+const config = {
+  ...
+  siteMetadata: {
+    title: "nukopy's Wiki",
+    description: "Wiki built with mdx, GatsbyJS.",
+    ogImage: "https://avatars3.githubusercontent.com/u/42367320?s=460&v=4",
+    docsLocation: "https://github.com/nukopy/wiki",
+    favicon: "https://avatars3.githubusercontent.com/u/42367320?s=460&v=4"
+  }
+  ...
+}
+
+```
