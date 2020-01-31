@@ -45,7 +45,15 @@ metaDescription: "技術用語のメモ"
 
 - **クラウド**
   - **コンピュータ（サーバ）を，専門の事業者が運営する施設のコンピュータを必要なだけ借りて運用する**こと．規模の増減を柔軟かつ迅速に行うことができる．
-  - Amazon/Amazon Web Service, Google/Google Cloud Platform, Microsoft/Microsoft Azure, Alibaba/Alibaba Cloud など．
+    - Amazon/Amazon Web Service
+    - Google/Google Cloud Platform
+    - Microsoft/Microsoft Azure
+    - Alibaba/Alibaba Cloud etc...
+
+## ロードバランサー load balancer, LB
+
+- [参考：ロードバランサとは？わかりやすく解説！](https://academy.gmocloud.com/qa/20170810/4591)
+fixme.
 
 ## サーバーレス serverless
 
