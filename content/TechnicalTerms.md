@@ -349,6 +349,12 @@ GitHub アカウントで Qiita に登録する際は大きく分けて以下の
 
 （引用元：[OAuth2の解説サイトを漁る前に](https://qiita.com/kojisaiki/items/48adf59d5d634fd330af)）
 
+## ACL / アクセスコントロールリスト / アクセス制御リスト
+
+- **アクセスコントロール** Access Control List
+
+ざっくり言うと，「リソース（ファイル，ディレクトリ，ネットワークなど）へのアクセス権利」
+
 ## 略語，頭字語
 
 IT の文脈で出てくる，略語（abbreviation），頭字語（acronym）のまとめ．
