@@ -11,8 +11,8 @@ body {
 
 .video-responsive iframe {
   /* position: absolute; */
-  width: 350px;
-  height: 200px;
+  width: 700px;
+  height: 450px;
 }
 
 .diffNewLine {
