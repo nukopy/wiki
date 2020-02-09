@@ -69,11 +69,9 @@ const plugins = [
   {
     resolve: `gatsby-transformer-remark`,
     options: {
-      plugins: [
-        `gatsby-remark-mathjax`,
-      ],
-    },
-  },
+      plugins: [`gatsby-remark-mathjax`]
+    }
+  }
 ];
 if (
   config.header.search &&
