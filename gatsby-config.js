@@ -19,15 +19,23 @@ const plugins = [
         {
           resolve: "gatsby-remark-images",
           options: {
-            maxWidth: 1035,
-            sizeByPixelDensity: true
+            maxWidth: 500,
+            sizeByPixelDensity: false,
+            linkImagesToOriginal: false,
+            showCaptions: [`title`],
+            wrapperStyle: fluidResult =>
+              `margin-left: auto; margin-right: auto; max-width: ${fluidResult.presentationWidth}px;`
           }
         },
         {
           resolve: "gatsby-remark-copy-linked-files"
         }
       ],
-      extensions: [".mdx", ".md"]
+      extensions: [".mdx", ".md"],
+
+      // issue: https://github.com/gatsbyjs/gatsby/issues/15486
+      // なんか良く分からんけど動くからヨシ！
+      plugins: [`gatsby-remark-images`]
     }
   },
   "gatsby-plugin-emotion",
