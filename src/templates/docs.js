@@ -83,58 +83,58 @@ const Footer = () => {
     <FooterStyle>
       <small>&copy; 2019 nukopy All Rights Reserved.</small>
     </FooterStyle>
-  )
-}
+  );
+};
 
 export default class MDXRuntimeTest extends Component {
   waitForGlobal(name, timeout = 300) {
     return new Promise((resolve, reject) => {
-      let waited = 0
+      let waited = 0;
 
       function wait(interval) {
         setTimeout(() => {
-          waited += interval
+          waited += interval;
           // some logic to check if script is loaded
           // usually it something global in window object
           if (window[name] !== undefined) {
-            return resolve()
+            return resolve();
           }
           if (waited >= timeout * 1000) {
-            return reject({ message: 'Timeout' })
+            return reject({ message: "Timeout" });
           }
-          wait(interval * 2)
-        }, interval)
+          wait(interval * 2);
+        }, interval);
       }
 
-      wait(30)
-    })
+      wait(30);
+    });
   }
 
   componentDidMount() {
-    this.waitForGlobal('MathJax').then(() => {
+    this.waitForGlobal("MathJax").then(() => {
       top.MathJax.Hub.Config({
         tex2jax: {
           // inlineMath: [['$', '$'], ['\\(', '\\)']],
           displayMath: [["$$", "$$"]], // ['[', ']']],
           processEscapes: true,
           processEnvironments: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          skipTags: ["script", "noscript", "style", "textarea", "pre"],
           TeX: {
-            equationNumbers: { autoNumber: 'AMS' },
-            extensions: ['AMSmath.js', 'AMSsymbols.js'],
-          },
-        },
-      })
+            equationNumbers: { autoNumber: "AMS" },
+            extensions: ["AMSmath.js", "AMSsymbols.js"]
+          }
+        }
+      });
     });
 
     if (top.MathJax != null) {
-      top.MathJax.Hub.Queue(['Typeset', top.MathJax.Hub])
+      top.MathJax.Hub.Queue(["Typeset", top.MathJax.Hub]);
     }
   }
 
   componentDidUpdate() {
     if (top.MathJax != null) {
-      top.MathJax.Hub.Queue(['Typeset', top.MathJax.Hub])
+      top.MathJax.Hub.Queue(["Typeset", top.MathJax.Hub]);
     }
   }
 
@@ -220,11 +220,14 @@ export default class MDXRuntimeTest extends Component {
           ) : null}
           {metaTwitterCard ? (
             <meta name="twitter:card" content="summary" />
-            /* Card Large <meta name="twitter:card" content="summary_large_image"> */
-          ) : null}
+          ) : /* Card Large <meta name="twitter:card" content="summary_large_image"> */
+          null}
 
           <link rel="canonical" href={canonicalUrl} />
-          <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+            async
+          ></script>
         </Helmet>
         <div className={"titleWrapper"}>
           <h1 className={"title"}>{mdx.fields.title}</h1>
