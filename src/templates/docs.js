@@ -115,7 +115,7 @@ export default class MDXRuntimeTest extends Component {
       top.MathJax.Hub.Config({
         tex2jax: {
           // inlineMath: [['$', '$'], ['\\(', '\\)']],
-          displayMath: [['$$', '$$'], ['[', ']']],
+          displayMath: [["$$", "$$"]], // ['[', ']']],
           processEscapes: true,
           processEnvironments: true,
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
