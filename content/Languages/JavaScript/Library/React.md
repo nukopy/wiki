@@ -4,6 +4,12 @@ metaTitle: "React | JavaScript - Library"
 metaDescription: "React tips"
 ---
 
+## React べからず集
+
+良記事！！！React でやるべきでない書き方のまとめ．
+
+- [React のべからず集](https://qiita.com/jkr_2255/items/041f238a940f923e4dfc)
+
 ## Styling and CSS
 
 - [API REFERENCE: DOM Elements - style | React](https://reactjs.org/docs/dom-elements.html#style)
