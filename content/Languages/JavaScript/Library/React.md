@@ -4,11 +4,11 @@ metaTitle: "React | JavaScript - Library"
 metaDescription: "React tips"
 ---
 
-### Styling and CSS
+## Styling and CSS
 
 - [API REFERENCE: DOM Elements - style | React](https://reactjs.org/docs/dom-elements.html#style)
 
-#### Q. コンポーネントに対してインラインスタイル（`style` 属性）は使えるか？
+### Q. コンポーネントに対してインラインスタイル（`style` 属性）は使えるか？
 
 - A. 使える．しかし，**非推奨**．`className` で外部 CSS スタイルシートに定義されたクラスを参照するべき．
   nn
