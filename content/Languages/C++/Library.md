@@ -10,6 +10,118 @@ C++ のライブラリに関する tips．
 
 - [cpprefjp: std::string](https://cpprefjp.github.io/reference/string/)
 
+### string 型を整数へ変換
+
+- [cplusplus.com: std::stoll](http://www.cplusplus.com/reference/string/stoll/)
+- `stoi`: string to int
+- `stol`: string to long
+- `stoll`: string to long long
+- `stoull`: string to unsigned long long
+
+基本（参考：）
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  // converting decimal number.
+  string dec_num = "9876543210";
+  cout << "dec_num = " <<
+  stol(dec_num, nullptr, 10) << "\n";
+
+  // converting hexadecimal number.
+  string hex_num = "FFFFFF";
+  cout << "hex_num = " <<
+  stol(hex_num, nullptr, 16) << "\n";
+
+  // converting binary number.
+  string binary_num = "1111111";
+  cout << "binary_num = " <<
+  stol(binary_num, nullptr, 2) << "\n";
+
+  return 0;
+}
+```
+
+output
+
+```sh
+dec_num = 9876543210
+hex_num = 16777215
+binary_num = 127
+```
+
+- 例
+
+```cpp
+#include <iostream>   // std::cout
+#include <string>     // std::string, std::stoll
+
+int main ()
+{
+  std::string str = "8246821 0xffff 020";
+
+  std::string::size_type sz = 0;   // alias of size_t
+
+  while (!str.empty()) {
+    long long ll = std::stoll(str, &sz, 0);
+    std::cout << str.substr(0,sz) << " interpreted as " << ll << '\n';
+    str = str.substr(sz);
+  }
+
+  return 0;
+}
+```
+
+output
+
+```sh
+8246821 interpreted as 8246821
+0xffff interpreted as 65535
+020 interpreted as 16
+```
+
+### string::substr - 部分文字列の取得
+
+- [cpprefjp: std::basic_string::substr](https://cpprefjp.github.io/reference/string/basic_string/substr.html)
+
+```cpp
+basic_string substr(size_type pos = 0, size_type n = npos) const;
+```
+
+部分文字列を取得する．`pos` 番目から `n` 要素の文字列を返す．**`n` を省略した場合は文字列の最後までを取り出す**．
+
+- ex
+
+```cpp
+std::string str = "Hello, world!";
+
+// （0-origin で）2 番目から 3 文字取り出す
+std::string result = str.substr(2, 6);
+std::cout << result << std::endl;
+//>>> llo, w（全 6 文字）
+
+// （0-origin で）2 番目以降の文字列を取得
+std::string result1 = str.substr(2);
+std::cout << result1 << std::endl;
+//>>> llo, world!
+```
+
+- 特定の文字を検索してその文字を境に分断する．
+
+```cpp
+std::string str = "price:3000";
+std::string key;
+int value;
+
+int idx_split = (int)str.find(":");  // 3
+key = str.substr(0, idx_split);  // price
+value = stoi(str.substr(idx_split+1));  // "3000" -> 3000
+
+std::cout << "key: " << key << std::endl;  // key: price
+std::cout << "value: " << value << std::endl;  // value: 3000
+```
 
 ### 文字列の比較演算，辞書順
 
@@ -59,6 +171,25 @@ string str = "abcde";
 cout << str << "\n";
 reverse(str.begin(), str.end())
 cout << str << "\n";
+```
+
+### 文字列の検索，含まれるかどうかの判定
+
+- [【C++】std::string で文字列が含まれるかどうかの判定【contains】](https://marycore.jp/prog/cpp/std-string-contains/)
+
+`std::string::find` を使用する．
+
+- `str.find("検索文字列")`
+  - 戻り値
+    - 見つかった場合：インデックス
+    - 見つからなかった場合：`std::string::npos`（見つからないことを示すメンバ定数）
+
+```cpp
+std::string s = "abc";
+
+if (s.find("b") != std::string::npos) {
+  cout << "文字列`b`が見つかりました" << "\n";
+}
 ```
 
 ## std::vector
