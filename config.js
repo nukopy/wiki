@@ -31,7 +31,7 @@ const config = {
       "/TechnicalTerms",
       "/Platforms",
       "/IDE",
-      "/Tips",
+      "/Tips"
     ],
     links: [{ text: "nukopy", link: "https://github.com/nukopy/" }],
     frontline: false,
@@ -40,9 +40,11 @@ const config = {
   siteMetadata: {
     title: "nukopy's Wiki",
     description: "Wiki built with mdx, GatsbyJS.",
-    ogImage: "https://nukopy-wiki.s3-ap-northeast-1.amazonaws.com/twitter_card.png",
+    ogImage:
+      "https://nukopy-wiki.s3-ap-northeast-1.amazonaws.com/twitter_card.png",
     docsLocation: "https://github.com/nukopy/wiki",
-    twitterCard: "https://nukopy-wiki.s3-ap-northeast-1.amazonaws.com/twitter_card.png",
+    twitterCard:
+      "https://nukopy-wiki.s3-ap-northeast-1.amazonaws.com/twitter_card.png",
     twitterCardLarge: "",
     favicon: "https://avatars3.githubusercontent.com/u/42367320?s=460&v=4"
   }

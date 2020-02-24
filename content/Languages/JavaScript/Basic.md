@@ -1,7 +1,7 @@
 ---
 title: "Basic"
 metaTitle: "Basic | JavaScript"
-metaDescription: "JavaScript Libraries tips."
+metaDescription: "JavaScript Basic tips."
 ---
 
 JavaScript の基本をまとめる．
@@ -26,32 +26,31 @@ JavaScript の基本をまとめる．
 - V
 - 配列の操作
 
-
 ## 文字列と数値
 
 ### 単純な出力
 
 ```js
 console.log(3);
-console.log('hoge');
+console.log("hoge");
 ```
 
 ### 数値の足し算，文字列の連結
 
 ```js
 console.log(3 + 3); // 6
-console.log('3' + '3');  // '33'
-console.log('3 + 3');  // '3 + 3'
+console.log("3" + "3"); // '33'
+console.log("3 + 3"); // '3 + 3'
 ```
 
 ### 計算
 
 ```js
-console.log(3 + 3);  // 和：6
-console.log(3 - 3);  // 差：0
-console.log(3 * 3);  // 積：0
-console.log(3 / 3);  // 商：1
-console.log(3 % 3);  // 余り：0
+console.log(3 + 3); // 和：6
+console.log(3 - 3); // 差：0
+console.log(3 * 3); // 積：0
+console.log(3 / 3); // 商：1
+console.log(3 % 3); // 余り：0
 ```
 
 ## 変数
@@ -60,16 +59,16 @@ console.log(3 % 3);  // 余り：0
 
 ```js
 let num = 1;
-let str = '1';
+let str = "1";
 ```
 
 ### 変数の更新
 
 ```js
 let num = 1;
-console.log(num);  // 1
+console.log(num); // 1
 num = 3;
-console.log(num);  // 3
+console.log(num); // 3
 ```
 
 ### 変数の中身を利用した変数の更新
@@ -77,15 +76,15 @@ console.log(num);  // 3
 ```js
 // パターン 1
 let num = 1;
-console.log(num);  // 1
+console.log(num); // 1
 num = num + 3;
-console.log(num);  // 4
+console.log(num); // 4
 
 // パターン 2：書く量が少ないため推奨
 let num = 1;
-console.log(num);  // 1
+console.log(num); // 1
 num += 3;
-console.log(num);  // 4
+console.log(num); // 4
 ```
 
 ### 演算による変数の更新：省略版（推奨）
@@ -93,11 +92,11 @@ console.log(num);  // 4
 ```js
 let num = 3;
 
-num += 3;  // num = num + 3
-num -= 3;  // num = num - 3
-num *= 3;  // num = num * 3
-num /= 3;  // num = num / 3
-num %= 3;  // num = num % 3
+num += 3; // num = num + 3
+num -= 3; // num = num - 3
+num *= 3; // num = num * 3
+num /= 3; // num = num / 3
+num %= 3; // num = num % 3
 ```
 
 ### 定数の定義：const
@@ -113,7 +112,7 @@ num = 5; // ERROR になる
 ### テンプレートリテラル
 
 バッククオートを利用し，変数の中身を埋め込んだ文字列を定義する方法．
-`\`${変数名}\`` で定義する．
+`\`\${変数名}\`` で定義する．
 
 ```js
 const num = 3;
@@ -159,8 +158,8 @@ console.log(3 !== 3);
 
 ```js
 const num = 3;
-console.log(0 <= num && num < 10);  // 0以上「かつ」10未満
-console.log(num < 0 || 5 < num);  // 0未満「または」5より大きい
+console.log(0 <= num && num < 10); // 0以上「かつ」10未満
+console.log(num < 0 || 5 < num); // 0未満「または」5より大きい
 ```
 
 ### Truthy / Falsy な値（参考：[Understanding JavaScript Truthy and Falsy](https://stackoverflow.com/questions/35642809/understanding-javascript-truthy-and-falsy)）
@@ -184,9 +183,9 @@ Falsy を考え，それ以外は Truthy であると考えれば良い．
 const undefinedNumber = undefined;
 
 if (undefinedNumber) {
-  console.log('変数は Truthy です');
+  console.log("変数は Truthy です");
 } else {
-  console.log('変数は Falsy です');
+  console.log("変数は Falsy です");
 }
 ```
 
@@ -234,7 +233,7 @@ while (条件式) {
 配列の要素に順次アクセスする例．for 文内では条件分岐が使えるので上手く活用すること．
 
 ```js
-const animals = ['cat', 'dog', 'rabbit'];
+const animals = ["cat", "dog", "rabbit"];
 
 for (let i = 0; i < animals.length; i++) {
   console.log(animals[i]);
@@ -249,17 +248,17 @@ for (let i = 0; i < animals.length; i++) {
 
 ```js
 // 定義
-const animals = ['cat', 'dog', 'rabbit'];
+const animals = ["cat", "dog", "rabbit"];
 
 // 要素へのアクセス：0-origin
 console.log(animals[0]);
 console.log(animals[2]);
-console.log(animals[3]);  // undefined，エラーにはならない
+console.log(animals[3]); // undefined，エラーにはならない
 
 // 要素の更新
-console.log(animals[0]);  // cat
-animals[0] = 'horse';
-console.log(animals[0]);  // horse
+console.log(animals[0]); // cat
+animals[0] = "horse";
+console.log(animals[0]); // horse
 ```
 
 - 配列と繰り返し処理
@@ -267,7 +266,7 @@ console.log(animals[0]);  // horse
 `配列.length` で配列の長さを取得できる．これを利用すると for 文で繰り返し回数を楽に書ける．
 
 ```js
-const animals = ['cat', 'dog', 'rabbit'];
+const animals = ["cat", "dog", "rabbit"];
 
 for (let i = 0; i < animals.length; i++) {
   console.log(animals[i]);
@@ -293,16 +292,16 @@ for (let i = 0; i < animals.length; i++) {
 ```js
 // オブジェクトの定義
 const friend = {
-  name: 'John',
-  age: 10,
+  name: "John",
+  age: 10
 };
 
 // オブジェクトの値の取得・更新
-console.log(friend.age);  // 10
+console.log(friend.age); // 10
 friend.age = 15;
-console.log(friend.age);  // 15
+console.log(friend.age); // 15
 friend.age++;
-console.log(friend.age);  // 16
+console.log(friend.age); // 16
 ```
 
 - オブジェクトの使い方：配列の要素としてオブジェクトを使う
@@ -332,15 +331,15 @@ for (let i = 0; i < menus.length; i++) {
 
 ```js
 // 配列
-const animals = ['cat', 'dog', 'rabbit'];
-console.log(animals[100]);  // 存在しないインデックス番号
+const animals = ["cat", "dog", "rabbit"];
+console.log(animals[100]); // 存在しないインデックス番号
 
 // オブジェクト
 const friend = {
-  name: 'John',
-  age: 10,
+  name: "John",
+  age: 10
 };
-console.log(friend.sex);  // 存在しないプロパティ
+console.log(friend.sex); // 存在しないプロパティ
 ```
 
 - `undefined` であるかの判定
@@ -382,5 +381,4 @@ for (let i = 0; i < array.length; i++) {
 ## 配列の操作
 
 ```js
-
 ```
