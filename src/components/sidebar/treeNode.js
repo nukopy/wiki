@@ -3,6 +3,7 @@ import OpenedSvg from "../images/opened";
 import ClosedSvg from "../images/closed";
 import config from "../../../config";
 import Link from "../link";
+import Divider from "./Divider";
 
 const TreeNode = ({
   className = "",
@@ -49,6 +50,7 @@ const TreeNode = ({
           ))}
         </ul>
       ) : null}
+      {url === "/" && <Divider />}
     </li>
   );
 };
