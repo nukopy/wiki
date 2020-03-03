@@ -42,6 +42,44 @@ File "<ipython-input-8-54b1e435e69c>", line 1
 SyntaxError: invalid syntax
 ```
 
+## リストを任意の値，要素数で初期化
+
+[神記事：（nkmk）Python のリスト（配列）を任意の値・要素数で初期化](https://note.nkmk.me/python-list-initialize/)
+
+- 空リストを作成
+
+**空のリストは falsy であることに注意**．
+
+```python
+# 空のリストを作成
+lis_empty = []
+
+# 空のリストが falsy であることの確認
+print(bool(lis_empty))
+# False
+```
+
+- 任意の値・要素数で初期化
+
+```python
+length = 10
+lis = [0] * length
+# [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+print(len(lis))
+# 10
+```
+
+要素数によらず，元のリストの要素が繰り返されたリストが生成される．
+
+```python
+lis = [0, 1, 2] * 3
+# [0, 1, 2, 0, 1, 2, 0, 1, 2]
+```
+
+- 2 次元配列（リストのリスト）を初期化する際の注意
+- タプル、配列（array 型）の場合
+
 ## デコレータを理解する
 
 - [正直これ見流だけで十分：Python：デコレータについて](https://blog.amedama.jp/entry/2018/09/02/013351)
