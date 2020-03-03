@@ -82,14 +82,14 @@ const Tree = ({edges}) => {
   });
   const [collapsed, setCollapsed] = useState({
     // Edit here WHEN the order of right sidebar is changed or new chapter is added in `config.js`.
-    '/Languages': true,
-    '/Database': true,
-    '/DevelopmentEnvironment': true,
-    '/Web': true,
-    '/Git': true,
-    '/TechnicalTerms': true,
-    '/Platforms': true,
-    '/IDE': true,
+    "/Database": true,
+    "/DevelopmentEnvironment": true,
+    "/Git": true,
+    "/IDE": true,
+    "/Languages": true,
+    "/Platforms": true,
+    "/TechnicalTerms": true,
+    "/Web": true
   });
   const toggle = (url) => {
     setCollapsed({
