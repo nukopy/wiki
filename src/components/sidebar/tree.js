@@ -99,6 +99,7 @@ const Tree = ({ edges }) => {
   });
   const [collapsed, setCollapsed] = useState({
     // Edit here WHEN the order of right sidebar is changed or new chapter is added in `config.js`.
+    "/Architecture": true,
     "/Database": true,
     "/DevelopmentEnvironment": true,
     "/Git": true,

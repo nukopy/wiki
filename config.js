@@ -22,6 +22,7 @@ const config = {
   },
   sidebar: {
     forcedNavOrder: [
+      "/Architecture",
       "/Home",
       "/Languages",
       "/Database",
