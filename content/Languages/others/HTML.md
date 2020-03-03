@@ -8,8 +8,8 @@ HTML tips.
 
 ## iframe で Youtube を埋め込む方法
 
-- [cf: embed youtube video - Refused to display in a frame because it set 'X-Frame-Options' to 'SAMEORIGIN' [duplicate]](https://stackoverflow.com/questions/25661182/embed-youtube-video-refused-to-display-in-a-frame-because-it-set-x-frame-opti)
-- [cf: Unable to play YouTube videos on embed](https://stackoverflow.com/questions/51346055/unable-to-play-youtube-videos-on-embed/51346168)
+- [stackoverflow: embed youtube video - Refused to display in a frame because it set 'X-Frame-Options' to 'SAMEORIGIN' [duplicate]](https://stackoverflow.com/questions/25661182/embed-youtube-video-refused-to-display-in-a-frame-because-it-set-x-frame-opti)
+- [stackoverflow: Unable to play YouTube videos on embed](https://stackoverflow.com/questions/51346055/unable-to-play-youtube-videos-on-embed/51346168)
 
 Youtube の動画リンクを以下のように書き換える．
 
