@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import { ExternalLink } from "react-feather";
 import "../styles.css";
 import config from "../../../config";
+import Divider from "./Divider";
 
 const forcedNavOrder = config.sidebar.forcedNavOrder;
 
@@ -99,22 +100,6 @@ const Sidebar = styled("aside")`
     width: 100%;
     /* position: relative; */
     height: 100vh;
-  }
-`;
-
-const Divider = styled(props => (
-  <li {...props} key={"divider"}>
-    <hr />
-  </li>
-))`
-  list-style: none;
-  padding: 0.5rem 0;
-
-  hr {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    border-bottom: 1px solid #ede7f3;
   }
 `;
 
