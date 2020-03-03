@@ -10,15 +10,15 @@ const Tree = ({ edges }) => {
   });
   const [collapsed, setCollapsed] = useState({
     // Edit here WHEN the order of left sidebar is changed or new chapter is added in `config.js`.
-    "/Architecture": true,
-    "/Database": true,
-    "/DevelopmentEnvironment": true,
-    "/Git": true,
-    "/IDE": true,
-    "/Languages": true,
-    "/Platforms": true,
-    "/TechnicalTerms": true,
-    "/Web": true
+    "/Architecture": false,
+    "/Database": false,
+    "/DevelopmentEnvironment": false,
+    "/Git": false,
+    "/IDE": false,
+    "/Languages": false,
+    "/Platforms": false,
+    "/TechnicalTerms": false,
+    "/Web": false
   });
   const toggle = url => {
     console.log("before:", collapsed);
