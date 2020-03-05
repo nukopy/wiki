@@ -6,6 +6,29 @@ metaDescription: "HTML tips"
 
 HTML tips.
 
+## ボタンを中央寄せする方法
+
+- [stackoverflow: trying to align html button at the center of the my page [duplicate]](https://stackoverflow.com/questions/11799159/trying-to-align-html-button-at-the-center-of-the-my-page)
+
+ボタンをブロック要素に変換して `margin: auto;` を設定する．
+
+- HTML
+
+```html
+<div>
+  <button>Submit</button>
+</div>
+```
+
+- CSS
+
+```css
+button {
+  margin: auto;
+  display: block;
+}
+```
+
 ## iframe で Youtube を埋め込む方法
 
 - [stackoverflow: embed youtube video - Refused to display in a frame because it set 'X-Frame-Options' to 'SAMEORIGIN' [duplicate]](https://stackoverflow.com/questions/25661182/embed-youtube-video-refused-to-display-in-a-frame-because-it-set-x-frame-opti)
