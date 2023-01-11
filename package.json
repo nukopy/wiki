@@ -37,7 +37,7 @@
     "gatsby-remark-mathjax": "^1.0.0",
     "gatsby-source-filesystem": "^2.1.37",
     "gatsby-source-graphql": "^2.1.23",
-    "gatsby-transformer-remark": "^2.6.48",
+    "gatsby-transformer-remark": "^5.25.1",
     "graphql": "^14.5.8",
     "graphql-tools": "^4.0.6",
     "is-absolute-url": "^3.0.0",
